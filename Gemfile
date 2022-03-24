@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'digest'
+gem 'sinatra'
+gem 'sinatra-reloader'
+gem 'erb'
+gem 'pry-byebug'
+gem 'sqlite3'
+gem 'webrick'
+gem 'thin'
+gem 'reel'

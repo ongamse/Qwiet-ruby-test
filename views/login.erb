@@ -1,0 +1,26 @@
+<%= erb :common %>
+<%
+auth = Authenticator.new(cookies, db)
+
+email = params["email"]
+password = params["password"]
+auth_success = auth.authenticate_user(email, password)
+if (auth_success)
+%>
+
+<p>Congratulations! You have logged in with the following details:</p>
+<p>Email: <%= params["email"] %></p>
+<h1>Password: <%= params["password"] %></h1>
+<p>That's a pretty cool password. We thought you might like to show it off. You can thank us later 😉</p>
+
+<a href="/user">Go to user dashboard</a>
+<%
+else
+%>
+
+<p>Sorry. Those credentials are incorrect.</p>
+<a href="/">Try again</a>
+
+<%    
+end
+%>

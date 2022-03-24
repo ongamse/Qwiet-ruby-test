@@ -1,0 +1,29 @@
+<%= erb :common %>
+
+<%
+documents =  db.select_documents(cookies[:user_id])
+if (documents.length > 0)
+%>
+<h1>Your documents</h1>
+<%
+end
+
+for document in documents do
+%>
+<a href="/download?filename=<%= document %>"><%= document %></a><br />
+<%
+end
+%>
+
+<div>
+<h2>Upload documents</h2>
+<p>Please choose a sensitive document to upload.</p>
+
+<form method="post" action="/upload" enctype="multipart/form-data">
+  <input type="file" id="file" name="file">
+  <input type="submit">
+</form>
+
+<a href="/logout">Logout<a>
+
+</div>

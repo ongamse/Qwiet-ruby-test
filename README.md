@@ -1,7 +1,7 @@
 # Overview
 Credzy is a vulnerable web app written in Ruby.
 
-I wrote this app to learn Ruby as new starter at Certsy. 
+I wrote this app to learn Ruby as a new starter at Certsy. 
 
 It was used as a CTF for *developer happy fun time* on Friday 25 March 2022. 
 
